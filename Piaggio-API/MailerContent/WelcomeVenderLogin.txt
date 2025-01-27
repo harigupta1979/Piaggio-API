@@ -1,0 +1,18 @@
+﻿<p>Dear <strong>@Name@</strong>,</p>
+
+<p>We are very happy to welcome you as one of the new dealer of our company.</p>
+
+<p>Your User Name <p>
+<p>@UserName@ </p>
+
+<p>Your Password <p>
+<p>@Password@ </p>
+
+<p><a href="@UrlLink@">Please click</a></p>
+
+
+<p>Thank you,</p>
+
+<p>With regards,</p>
+
+<p>ICICI Team</p>

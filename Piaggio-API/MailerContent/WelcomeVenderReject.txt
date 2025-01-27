@@ -1,0 +1,19 @@
+﻿<p>Dear <strong>@BusinessPartnerName@</strong>,</p>
+
+<p>We are very happy to welcome you as one of the new vendor of our company. We value our vendors and their and experiences very much, therefore you became our final choice out of (mention number of candidates) persons. We really thank you for choosing us and we all welcome you to our organization (mention the name of the organization). We are sending you an information booklet for your further knowledge of our company which will help you to work better. We will also provide you the information regarding the rules and regulations of our company and also our vendors.</p>
+
+<p>We are eagerly waiting to meet you and share your ideas on the day of (mention joining date), at the time of (mention time). On that previously mentioned day will give you our first order contract. You are requested to see our (mention the post) of the department of (mention the department) for your working details and delivery time.</p>
+
+<p>You are requested to bring the official documents and photo id proof (mention details) with you on the first day of the meeting.</p>
+
+<p>We welcome you once again in our organization, and hope your contribution will help greatly in the success of our project. Feel free to contact me at any time for any information you need for your work.</p>
+
+<p>I am always eager to help. We wish for your better working experience.</p>
+
+<p><a href="@UrlLink@">Please click</a> to procced on board process.</p>
+
+<p>Thank you,</p>
+
+<p>With regards,</p>
+
+<p>ICICI Team</p>
