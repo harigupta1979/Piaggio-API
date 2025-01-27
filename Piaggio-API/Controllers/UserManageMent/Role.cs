@@ -9,7 +9,7 @@ using Core.Module.UserManagement;
 using Microsoft.AspNetCore.Authorization;
 using Core.Module.UserManageMent;
 
-namespace ICICI_Dealer_API.Controllers.UserManagement
+namespace Piaggio_API.Controllers.UserManagement
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -4,7 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using System.Security.Claims;
 
-namespace ICICI_Dealer_API.JWT
+namespace Piaggio_API.JWT
 {
     public class Auth : IJwtAuth
     {

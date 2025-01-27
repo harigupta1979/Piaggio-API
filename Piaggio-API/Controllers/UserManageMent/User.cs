@@ -8,7 +8,7 @@ using BusinessLogic.UserManagement;
 using Core.Module.UserManagement;
 using Microsoft.AspNetCore.Authorization;
 
-namespace ICICI_Dealer_API.Controllers.UserManageMent
+namespace Piaggio_API.Controllers.UserManageMent
 {
     [Route("api/[controller]")]
     [ApiController]

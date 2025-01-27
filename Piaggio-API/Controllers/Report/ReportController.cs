@@ -9,7 +9,7 @@ using Microsoft.Reporting.NETCore;
 using System.IO;
 using ClosedXML.Excel;
 
-namespace ICICI_Dealer_API.Controllers.Report
+namespace Piaggio_API.Controllers.Report
 {
     [Route("api/[controller]")]
     [ApiController]

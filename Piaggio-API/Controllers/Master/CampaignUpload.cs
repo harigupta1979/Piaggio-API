@@ -13,7 +13,7 @@ using System.Net.Http;
 using ExcelDataReader;
 using System.Net.Http.Headers;
 
-namespace ICICI_Dealer_API.Controllers.Master
+namespace Piaggio_API.Controllers.Master
 {
     [Route("api/[controller]")]
     [ApiController]

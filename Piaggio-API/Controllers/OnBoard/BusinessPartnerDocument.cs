@@ -9,7 +9,7 @@ using Core.Module;
 using Microsoft.AspNetCore.Authorization;
 using BusinessLogic.Onboard;
 
-namespace Dealer_Main_API.Controllers.OnBoard
+namespace Piaggio_API.Controllers.OnBoard
 {
     [Route("api/[controller]")]
     [ApiController]
