@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h2>Error Log</h2>
+
+    <table style="width: 100%;">
+        <colgroup>
+            <col span="5">
+            <col span="3" style="visibility: collapse">
+        </colgroup>
+        <tr>
+            <td>
+                Page Name
+            </td>
+            <td>@ControllerName@</td>
+        </tr>
+        <tr>
+            <td>
+                Error Description
+            </td>
+            <td>@ErrorMessage@</td>
+        </tr>
+        <tr>
+            <td>
+                Function Name
+            </td>
+            <td>@FunctionName@</td>
+        </tr>
+        <tr>
+            <td>
+                User Name
+            </td>
+            <td>@UserName@</td>
+        </tr>
+        <tr>
+            <td>
+                Error Report Date & Time
+            </td>
+            <td>@LastUpdatedOn@</td>
+        </tr>
+        <tr>
+            <td>
+                Reference ID
+            </td>
+            <td>@ReferenceID@</td>
+        </tr>
+    </table>
+</body>
+</html>

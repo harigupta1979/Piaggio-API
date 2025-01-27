@@ -1,0 +1,134 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Piaggio-API</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MailerContent\AccountMailer.txt" />
+    <None Remove="MailerContent\BusinessPartnerOtpAuth.html" />
+    <None Remove="MailerContent\BusinessPartnerOtpAuth.txt" />
+    <None Remove="MailerContent\DealerAgreementMail.html" />
+    <None Remove="MailerContent\WelcomeVender.html" />
+    <None Remove="MailerContent\WelcomeVender.txt" />
+    <None Remove="MailerContent\WelcomeVenderLogin.html" />
+    <None Remove="MailerContent\WelcomeVenderLogin.txt" />
+    <None Remove="MailerContent\WelcomeVenderReject.html" />
+    <None Remove="MailerContent\WelcomeVenderReject.txt" />
+    <None Remove="Template\CampaignUpload.xlsx" />
+    <None Remove="Template\CampaignUpload_bak.xlsx" />
+    <None Remove="Template\OnboardDataMigrattionTemplate.xlsx" />
+    <None Remove="Template\OnboardTemplate.xlsx" />
+    <None Remove="Template\Promotion.xlsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="MailerContent\AccountMailer.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MailerContent\BusinessPartnerOtpAuth.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MailerContent\BusinessPartnerOtpAuth.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MailerContent\WelcomeVenderReject.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MailerContent\WelcomeVenderLogin.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MailerContent\WelcomeVender.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MailerContent\DealerAgreementMail.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MailerContent\WelcomeVender.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MailerContent\WelcomeVenderLogin.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MailerContent\WelcomeVenderReject.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Template\CampaignUpload.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Template\OnboardDataMigrattionTemplate.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Template\OnboardTemplate.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Template\Promotion.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\CampaignConatiner\IV-013" />
+    <None Include="wwwroot\CampaignConatiner\IV_014_CarFuelIndicator.jpg" />
+    <None Include="wwwroot\CampaignConatiner\IV_014_Fuel.png" />
+    <None Include="wwwroot\CampaignConatiner\IV_015_1052_Pan Card.jpg" />
+    <None Include="wwwroot\CampaignConatiner\IV_015_1056_Aadhar Card.png" />
+    <None Include="wwwroot\CampaignConatiner\IV_019_CarFuelIndicator.jpg" />
+    <None Include="wwwroot\CampaignConatiner\IV_019_Car_inspection.jpg" />
+    <None Include="wwwroot\CampaignConatiner\IV_027_AnishGupta_UploadImage.jpeg" />
+    <None Include="wwwroot\CampaignConatiner\IV_027_AnishGupta_UploadImage.jpg" />
+    <None Include="wwwroot\CampaignConatiner\SR_005_1056_Aadhar Card.png" />
+    <None Include="wwwroot\CampaignConatiner\SR_005_Car_inspection.jpg" />
+    <None Include="wwwroot\CampaignConatiner\SR_005_Fuel.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.96.0" />
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.17" />
+    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.17" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.4.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.23.1" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.10.0" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="4.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AppConfig\AppConfig.csproj" />
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj" />
+    <ProjectReference Include="..\Core.Module\Core.Module.csproj" />
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
+    <ProjectReference Include="..\Logger\Logger.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\CampaignConatiner\" />
+    <Folder Include="wwwroot\GSTFilesContainer\" />
+    <Folder Include="wwwroot\SendMailer\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\AgreementFilesContainer\MOUFormat.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="MailerContent\PrivacyPolicy.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="MailerContent\TermsAndConditionsPromotionPartners.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+</Project>

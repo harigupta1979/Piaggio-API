@@ -1,0 +1,9 @@
+﻿<p>Dear <strong>User</strong>,</p>
+
+<p>Your Invoice Generated</p>
+
+<p>Thank you,</p>
+
+<p>With regards,</p>
+
+<p>ICICI Team</p>
