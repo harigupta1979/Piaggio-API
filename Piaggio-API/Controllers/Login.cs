@@ -5,9 +5,9 @@ using Logger;
 using AppConfig;
 using Core.Module;
 using BusinessLogic;
-using ICICI_Dealer_API.JWT;
+using Piaggio_API.JWT;
 
-namespace ICICI_Dealer_API.Controllers
+namespace Piaggio_API.Controllers
 {
     //[Produces("application/json")]
     [Route("api/[controller]")]

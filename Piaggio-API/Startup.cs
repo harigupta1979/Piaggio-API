@@ -1,5 +1,5 @@
 using AppConfig;
-using ICICI_Dealer_API.Healper;
+using Piaggio_API.Healper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -9,9 +9,9 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using ICICI_Dealer_API.JWT;
+using Piaggio_API.JWT;
 
-namespace ICICI_Dealer_API
+namespace Piaggio_API
 {
     public class Startup
     {
@@ -30,7 +30,7 @@ namespace ICICI_Dealer_API
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ICICI_Dealer_API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Piaggio_API", Version = "v1" });
                 c.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
@@ -91,23 +91,22 @@ namespace ICICI_Dealer_API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ICICI_Dealer_API v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Piaggio_API v1"));
             }
             else
             {
                 app.UseSwagger();
                 app.UseSwaggerUI(c =>
                 {
-                    c.SwaggerEndpoint("./swagger/v1/swagger.json", "ICICI_Dealer_API v1");
+                    c.SwaggerEndpoint("./swagger/v1/swagger.json", "Piaggio_API v1");
                     c.RoutePrefix = string.Empty;
                 });
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
-            //app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().WithExposedHeaders("Content-Disposition"));
-            app.UseCors(builder => builder.WithOrigins("http://103.165.118.37:93/").AllowAnyMethod().AllowAnyHeader().AllowCredentials().SetIsOriginAllowed(origin => true).WithExposedHeaders("Content-Disposition"));
-
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().WithExposedHeaders("Content-Disposition"));
+           
             app.UseAuthentication();
             app.UseAuthorization();
 

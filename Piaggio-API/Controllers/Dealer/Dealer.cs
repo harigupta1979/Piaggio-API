@@ -8,7 +8,7 @@ using BusinessLogic.Dealer;
 using Core.Module.Dealer;
 using Microsoft.AspNetCore.Authorization;
 
-namespace ICICI_Dealer_API.Controllers.Dealer
+namespace Piaggio_API.Controllers.Dealer
 {
     [Route("api/[controller]")]
     [ApiController]
