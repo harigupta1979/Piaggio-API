@@ -83,10 +83,8 @@ namespace Piaggio_API.Controllers
                 return Ok(Newtonsoft.Json.JsonConvert.SerializeObject(objList));
             }
         }
-       
 
-
-     /*   [HttpPost("UpdateAccountLockedStatus")]
+        /*   [HttpPost("UpdateAccountLockedStatus")]
         public async Task<IActionResult> UpdateAccountLockedStatus([FromBody] Users obj)
         {
             try
@@ -102,6 +100,7 @@ namespace Piaggio_API.Controllers
                 return Ok(Newtonsoft.Json.JsonConvert.SerializeObject(objList));
             }
         }*/
+
         [HttpPost("GetUserActivityLog")]
         public async Task<IActionResult> GetUserActivityLog([FromBody] UserActivity obj)
         {

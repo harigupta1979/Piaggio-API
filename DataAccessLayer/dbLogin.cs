@@ -15,6 +15,7 @@ namespace DataAccessLayer
         {
             this._configuration = configuration;
         }
+
         public DataSet Get_UserLogin(Users _obj)
         {
             try { 
@@ -29,6 +30,7 @@ namespace DataAccessLayer
                 return null;
             }
 }
+
         public DataSet Get_UserLogin_TimeDtl(LogInLog _obj)
         {
 
@@ -44,6 +46,7 @@ namespace DataAccessLayer
                 return null;
             }
 }
+
         public DataTable Get_ResetPassword(UserResetPwd _obj)
         {
             try { 
@@ -60,6 +63,7 @@ namespace DataAccessLayer
                 return null;
             }
         }
+
         public DataSet Check_UserLogin(Users obj)
         {
             try { 
@@ -73,7 +77,8 @@ namespace DataAccessLayer
                 return null;
             }
 }
-      /*  public DataSet Update_Account_Locked_Status(Users obj)
+
+        /*  public DataSet Update_Account_Locked_Status(Users obj)
         {
             DBAccess DB = new DBAccess(this._configuration);
             DB.Parameters.Add(new SqlParameter("@USERNAME", obj.Username));
@@ -81,6 +86,7 @@ namespace DataAccessLayer
             DB.Parameters.Add(new SqlParameter("@Action", "UPDATE"));
             return DB.ExecuteDataSet("USP_USER_ACCLOCKOUT");
         }*/
+
         public DataSet Get_UserActivityLog(UserActivity obj)
         {
             DBAccess DB = new DBAccess(this._configuration);
@@ -103,6 +109,7 @@ namespace DataAccessLayer
                 return null;
             }
         }
+
         public DataSet PostGenerateUserOTP(UserOTP obj)
         {
             try { 
@@ -119,6 +126,7 @@ namespace DataAccessLayer
                 return null;
             }
 }
+
         public DataSet Verify_User_OTP(UserOTP obj)
         {
             try { 
@@ -136,6 +144,7 @@ namespace DataAccessLayer
                 return null;
             }
 }
+
         public DataSet Update_User_Password(UserOTP obj)
         {
             try { 
@@ -151,6 +160,7 @@ namespace DataAccessLayer
                 return null;
             }
 }
+
         public DataTable GetdbGetUserInfo(UserInfo obj)
         {
             try { 

@@ -137,7 +137,7 @@ namespace Logger
                 MaillerBody = MaillerBody.Replace("@UserName@", obj.UserName);
                 MaillerBody = MaillerBody.Replace("@LastUpdatedOn@", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                 MaillerBody = MaillerBody.Replace("@ReferenceID@", obj.ReferenceID.ToString());
-                SendMail(Convert.ToString(this._configuration.AppKey("Errormail")), "", 10001, "ICICI:ErrorMail", MaillerBody);
+                SendMail(Convert.ToString(this._configuration.AppKey("Errormail")), "", 10001, "Piaggio:ErrorMail", MaillerBody);
             }
             catch (Exception ex)
             {

@@ -25,6 +25,7 @@ namespace BusinessLogic
             dbLogin = new DbLogin(this._configuration);
             dbLogger = new DbLogger(this._configuration);
         }
+
         public async Task<CommonList> GetLogin(Users obj)
         {
             objList = new CommonList();
@@ -60,6 +61,7 @@ namespace BusinessLogic
                 return objList;
             }
         }
+
         public async Task<CommonList> GetResetPassword(UserResetPwd obj)
         {
             objList = new CommonList();
@@ -134,7 +136,8 @@ namespace BusinessLogic
                 return objList;
             }
         }
- /*       public async Task<CommonList> UpdateAccountLockedStatus(Users obj)
+
+        /*       public async Task<CommonList> UpdateAccountLockedStatus(Users obj)
         {
             objList = new CommonList();
             DataTable dt;
@@ -154,6 +157,7 @@ namespace BusinessLogic
                 return objList;
             }
         }*/
+
         public async Task<CommonList> GetUserActivityLog(UserActivity obj)
         {
             objList = new CommonList();
@@ -182,6 +186,7 @@ namespace BusinessLogic
                 return objList;
             }
         }
+
         //public async Task<CommonList> GetUserActivityLog(UserActivity obj)
         //{
         //    objList = new CommonList();
@@ -210,6 +215,7 @@ namespace BusinessLogic
         //    }
 
         //}
+
         public async Task<CommonList> GenerateUserOTP(UserOTP obj)
         {
             objList = new CommonList();
@@ -253,6 +259,7 @@ namespace BusinessLogic
             }
 
         }
+
         public async Task<CommonList> VerifyUserOTP(UserOTP obj)
         {
             objList = new CommonList();
@@ -305,6 +312,7 @@ namespace BusinessLogic
             }
 
         }
+
         public async Task<CommonList> UpdateUserPassword(UserOTP obj)
         {
             objList = new CommonList();
@@ -335,6 +343,7 @@ namespace BusinessLogic
                 return objList;
             }
         }
+
         public async Task<CommonList> GetUserInfo(UserInfo obj)
         {
             objList = new CommonList();
