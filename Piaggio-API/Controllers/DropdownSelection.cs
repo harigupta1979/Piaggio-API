@@ -22,6 +22,7 @@ namespace Piaggio_API.Controllers
             dbLogger = new DbLogger(this._configuration);
             bSelection = new BSelection(this._configuration);
         }
+
         [HttpPost("GetSelection")]
         //[Authorize]
         public async Task<IActionResult> GetSelection([FromBody] SelectionClass obj)
