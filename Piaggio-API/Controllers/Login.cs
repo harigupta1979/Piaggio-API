@@ -83,24 +83,6 @@ namespace Piaggio_API.Controllers
                 return Ok(Newtonsoft.Json.JsonConvert.SerializeObject(objList));
             }
         }
-
-        /*   [HttpPost("UpdateAccountLockedStatus")]
-        public async Task<IActionResult> UpdateAccountLockedStatus([FromBody] Users obj)
-        {
-            try
-            {
-                var t1 = Task.Run(() => dLogin.UpdateAccountLockedStatus(obj));
-                await Task.WhenAll(t1);
-                objList = t1.Status == TaskStatus.RanToCompletion ? t1.Result : objList;
-                return Ok(Newtonsoft.Json.JsonConvert.SerializeObject(objList));
-            }
-            catch (Exception ex)
-            {
-                dbLogger.PostErrorLog("Login", ex.Message.ToString(), "UpdateAccountLockedStatus", 10002, obj.Username, true);
-                return Ok(Newtonsoft.Json.JsonConvert.SerializeObject(objList));
-            }
-        }*/
-
         [HttpPost("GetUserActivityLog")]
         public async Task<IActionResult> GetUserActivityLog([FromBody] UserActivity obj)
         {
