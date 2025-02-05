@@ -88,7 +88,7 @@ namespace DataAccessLayer
                 DBAccess DB = new DBAccess(this._configuration);
                 DB.Parameters.Add(new SqlParameter("@SuperAdmin", (obj.Condition.ToLower() == "true" ? 1 : 0)));
                 DB.Parameters.Add(new SqlParameter("@UserID", obj.FilterId));
-                return DB.ExecuteDataTable("USP_DynamicManu");
+                return DB.ExecuteDataTable("USP_DynamicpiaggioManu");
             }
             catch (Exception ex)
             {
