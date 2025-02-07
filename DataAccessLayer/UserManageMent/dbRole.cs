@@ -25,6 +25,7 @@ namespace DataAccessLayer.UserManagement
                 DB.Parameters.Add(new SqlParameter("@RoleId", obj.RoleId));
                 DB.Parameters.Add(new SqlParameter("@RoleName", obj.RoleName==null?"": obj.RoleName.Trim()));
                 DB.Parameters.Add(new SqlParameter("@RoleDesc", obj.RoleDesc==null?"":obj.RoleDesc.Trim()));
+                DB.Parameters.Add(new SqlParameter("@RoleParentId", obj.RoleParentId)); 
                 DB.Parameters.Add(new SqlParameter("@IsActive", obj.IsActive));
                 DB.Parameters.Add(new SqlParameter("@CreatedBy", obj.CreatedBy));
                 DB.Parameters.Add(new SqlParameter("@UpdatedBy", obj.UpdatedBy));
@@ -39,16 +40,13 @@ namespace DataAccessLayer.UserManagement
             }
         }
 
-        public long PostdbRoleMenuMappinging(RoleClass obj)
+        public long PostdbRoleMenuMappinging(RoleMenuMappingingClass obj)
         {
             DBAccess DB = new DBAccess(this._configuration);
             try
             {
                 DB.Parameters.Add(new SqlParameter("@RoleId", obj.RoleId));
-                DB.Parameters.Add(new SqlParameter("@SubMenuId", obj.SubMenuId));
-                DB.Parameters.Add(new SqlParameter("@IsAdd", obj.IsAdd));
-                DB.Parameters.Add(new SqlParameter("@IsEdit", obj.IsEdit));
-                DB.Parameters.Add(new SqlParameter("@IsView", obj.IsView));
+                DB.Parameters.Add(new SqlParameter("@MenuId", obj.MenuId));
                 DB.Parameters.Add(new SqlParameter("@CreatedBy", obj.CreatedBy));
                 DB.Parameters.Add(new SqlParameter("@UpdatedBy", obj.UpdatedBy));
                 DB.Parameters.Add(new SqlParameter("@IpAddress", obj.IpAddress));

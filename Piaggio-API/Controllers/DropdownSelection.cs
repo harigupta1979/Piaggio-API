@@ -24,7 +24,7 @@ namespace Piaggio_API.Controllers
         }
 
         [HttpPost("GetSelection")]
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> GetSelection([FromBody] SelectionClass obj)
         {
             try

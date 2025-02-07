@@ -42,10 +42,10 @@ namespace BusinessLogic.UserManagement
                 }
                 else if (Recid != null && Recid != 0)
                 {
-                    obj.RoleId = Recid;
-                    var t2 = Task.Run(() => dbRole.PostdbRoleMenuMappinging(obj));
-                    await Task.WhenAll(t2);
-                    dynamic status = t2.Status == TaskStatus.RanToCompletion ? t2.Result : null;
+                    //////obj.RoleId = Recid;
+                    //var t2 = Task.Run(() => dbRole.PostdbRoleMenuMappinging(obj));
+                    //await Task.WhenAll(t2);
+                    //dynamic status = t2.Status == TaskStatus.RanToCompletion ? t2.Result : null;
 
                     commonIUD.FinalMode = DBReturnInsertUpdateDelete.INSERT;
                     if (obj.RoleId != null && obj.RoleId != 0) { commonIUD.FinalMode = DBReturnInsertUpdateDelete.UPDATE; }
@@ -56,6 +56,55 @@ namespace BusinessLogic.UserManagement
                 else
                 {
                     commonIUD.FinalMode = DBReturnInsertUpdateDelete.ERROR;
+                }
+                return commonIUD;
+            }
+            catch (Exception ex)
+            {
+                commonIUD.FinalMode = DBReturnInsertUpdateDelete.ERROR;
+                if (ex.Message.Contains("UNIQUE KEY"))
+                {
+                    commonIUD.Message = "Cannot insert duplicate record.";
+                }
+                dbLogger.PostErrorLog("BRole", ex.Message.ToString(), "PostRole", 10001, "Admin", true);
+                return commonIUD;
+            }
+        }
+        public async Task<CommonIUD> PostRoleMenuMappinging(RoleMenuMappingingClass obj)
+        {
+            commonIUD = new CommonIUD();
+            var Recid = (dynamic)null;
+            try
+            {
+
+                if (obj.RoleId != null && obj.RoleId != 0)
+                {
+                obj.Action = "insert"; 
+                var t1 = Task.Run(() => dbRole.PostdbRoleMenuMappinging(obj));
+                await Task.WhenAll(t1);
+                Recid = t1.Status == TaskStatus.RanToCompletion ? t1.Result : null;
+                if (Recid == -99)
+                {
+                    commonIUD.FinalMode = DBReturnInsertUpdateDelete.DUPLICATE;
+                    commonIUD.Message = "Record already exists !";
+                }
+                else if (Recid != null && Recid != 0)
+                {
+  
+                    commonIUD.FinalMode = DBReturnInsertUpdateDelete.UPDATE; 
+                    commonIUD.Recid = Recid;
+                    commonIUD.Message = "Permission Updated Successfully!"; 
+                    commonIUD.AdditionalParameter = "";
+                }
+                else
+                {
+                    commonIUD.FinalMode = DBReturnInsertUpdateDelete.ERROR;
+                }
+                }
+                else
+                {
+                    commonIUD.FinalMode = DBReturnInsertUpdateDelete.ERROR;
+                    commonIUD.Message = "Provide role !";
                 }
                 return commonIUD;
             }

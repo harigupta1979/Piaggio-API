@@ -41,9 +41,25 @@ namespace Piaggio_API.Controllers.UserManagement
                 return Ok(Newtonsoft.Json.JsonConvert.SerializeObject(common));
             }
         }
-
-        [HttpPost("GetRole")]
+        [HttpPost("PostRoleMenuMappinging")]
         [Authorize]
+        public async Task<IActionResult> PostRoleMenuMappinging([FromBody] RoleMenuMappingingClass obj)
+        {
+            try
+            {
+                var t1 = Task.Run(() => bRole.PostRoleMenuMappinging(obj));
+                await Task.WhenAll(t1);
+                common = t1.Status == TaskStatus.RanToCompletion ? t1.Result : common;
+                return Ok(Newtonsoft.Json.JsonConvert.SerializeObject(common));
+            }
+            catch (Exception ex)
+            {
+                dbLogger.PostErrorLog("Role", ex.Message.ToString(), "PostRole", 10001, "Admin", true);
+                return Ok(Newtonsoft.Json.JsonConvert.SerializeObject(common));
+            }
+        }
+        [HttpPost("GetRole")]
+       [Authorize]
         public async Task<IActionResult> GetRole([FromBody] RoleSearch obj)
         {
             try
